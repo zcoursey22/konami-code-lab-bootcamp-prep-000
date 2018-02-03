@@ -4,7 +4,7 @@ function init() {
   // Write your JavaScript code inside the init() function
   let index = 0;
   document.querySelector('body').addEventListener('keydown', function(e) {
-    if (parseInt(e.which) === code[index]) {
+    if (parseInt(e.which || e.detail) === code[index]) {
       if (index === code.length - 1) {
         alert("Konami!");
         index = 0;
